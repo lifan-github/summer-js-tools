@@ -24,5 +24,6 @@
  sumQuery.queryUrlArgs('https://www.baidu.com?id=123&name=lily&age=18', 'name');
 
  // 分割金额整数位、小数位（使用场景：整数位的显示字号比小数位字号大）return {int: '100', dec: '.23'}
+ sumQuery.splitPrice('899.3', 2); // arg1: 金额，arg2: 保留的小数位
 
 ```
