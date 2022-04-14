@@ -5,7 +5,6 @@ node_modules
 .DS_Store
 npm-debug.log
 build
-dist
 yarn-error.log
 local.config.js
 .git
