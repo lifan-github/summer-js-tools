@@ -10,6 +10,7 @@ export { randomNum } from "./random/num"; */
 let moduleExports = {};
 const r = require.context('./', true, /^\.\/.+\/.+\.js$/);
 r.keys().forEach(key => {
+    // 统一加个别名
     let attr = key.substring(key.lastIndexOf('/') + 1, key.lastIndexOf('.'));
     moduleExports[attr] = r(key);
 });
