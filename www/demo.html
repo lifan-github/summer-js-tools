@@ -3,9 +3,12 @@
     // ==== 此处是测试方法使用（summerTools：webpack中暴露的全局名称） ====
     // 右键选择浏览器查看输出
     console.log(summerTools, 'summerTools');
-    const {color, num, form} = summerTools;
+    const {color, num, form, queryString} = summerTools;
     console.log(color.randomColor(), '随机颜色');
     console.log(num.randomNum(1, 100), '生成指定范围的随机数');
     console.log(form.isChinaPhone("13288886666"), '中国区手机号验证-13288886666');
     console.log(form.isEmail("1328886@163.com"), '邮箱验证-1328886@163.com');
+    console.log(queryString.queryUrlStr('https://www.baidu.com?id=123&name=lily&age=18', 'name'), '查询');
+    console.log(queryString.queryUrlArgs('https://www.baidu.com?id=123&name=lily&age=18'), '查询');
+    console.log(queryString.splitPrice("182.345"), '查询');
 </script>
