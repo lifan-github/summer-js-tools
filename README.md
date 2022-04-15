@@ -5,7 +5,7 @@
 ```
 * 2、使用
 ```
- import { sumColor, sumNum, sumForm, sumQuery } from "summer-js-tools";
+ import { sumColor, sumNum, sumForm, sumQuery, getCookie, setCookie, removeCookie } from "summer-js-tools";
 
  sumColor.randomColor(); // 随机一个颜色值 return string
 
@@ -25,5 +25,10 @@
 
  // 分割金额整数位、小数位（使用场景：整数位的显示字号比小数位字号大）return {int: '100', dec: '.23'}
  sumQuery.splitPrice('899.3', 2); // arg1: 金额，arg2: 保留的小数位
+
+ // cookie设置、获取、删除
+ setCookie('name', 'value', 7); // 设置name:value, 有效期7天
+ getCookie('name'); // 获取
+ removeCookie('name');
 
 ```
