@@ -5,7 +5,15 @@
 ```
 * 2、使用
 ```
- import { sumColor, sumNum, sumForm, sumQuery, getCookie, setCookie, removeCookie } from "summer-js-tools";
+ import { 
+     sumColor,
+     sumNum, 
+     sumForm, 
+     sumQuery, 
+     getCookie, 
+     setCookie, 
+     removeCookie 
+ } from "summer-js-tools";
 
  sumColor.randomColor(); // 随机一个颜色值 return string
 

@@ -1,26 +1,27 @@
 {
-  "name": "summer-js-tools",
-  "version": "1.0.6",
-  "description": "前端开发常见的方法",
-  "main": "./dist/summerTools.js",
-  "repository":{
-    "type": "git",
-    "url": "https://github.com/lifan-github/summer-js-tools"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "tips": "release为npm发布至官方的命令，此处只能用npm run release跑脚本,不能用yarn release",
-    "release": "yarn build && npm publish"
-  },
-  "keywords": [
-    "utils"
-  ],
-  "author": "summer",
-  "license": "ISC",
-  "dependencies": {
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
-  }
+	"name": "summer-js-tools",
+	"version": "1.0.7",
+	"description": "前端开发常见的方法",
+	"main": "./dist/summerTools.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lifan-github/summer-js-tools"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "webpack --mode development",
+		"build": "webpack --mode production",
+		"tips": "release为npm发布至官方的命令，此处只能用npm run release跑脚本,不能用yarn release",
+		"release": "yarn resetVer && yarn build && npm publish",
+		"resetVer": "node ./utils/resetVersion.js"
+	},
+	"keywords": [
+		"utils"
+	],
+	"author": "summer",
+	"license": "ISC",
+	"dependencies": {
+		"webpack": "^5.72.0",
+		"webpack-cli": "^4.9.2"
+	}
 }
