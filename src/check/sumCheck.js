@@ -4,7 +4,7 @@
  * @param {*} value 
  * @return boolean
  */
-const checkValidValue = (value) => {
+export const checkValidValue = (value) => {
     const arr = [null, 'null', undefined, 'undefined', '', ' ', NaN, 'NaN'];
     if(arr.includes(value)){
         return false;
