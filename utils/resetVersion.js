@@ -5,7 +5,7 @@ const execSync = require('child_process').execSync
 const path = require('path');
 const fs = require('fs');
 const packageJsonStr = fs.readFileSync('./package.json').toString()
-console.log(packageJsonStr, 'packageJsonStr');
+console.log(packageJsonStr, '旧版本');
 
 try {
     const packageJson = JSON.parse(packageJsonStr);
@@ -24,7 +24,7 @@ try {
     const newVersion = arr.join('.');
     packageJson.version = newVersion;
 
-    console.log(packageJson);
+    console.log(packageJson, '新版本');
 
     fs.writeFileSync('./package.json', JSON.stringify(packageJson, null, '\t'));
 

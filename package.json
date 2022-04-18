@@ -1,6 +1,6 @@
 {
 	"name": "summer-js-tools",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "前端开发常见的方法",
 	"main": "./dist/summerTools.js",
 	"repository": {

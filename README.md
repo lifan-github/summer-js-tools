@@ -12,7 +12,8 @@
      sumQuery, 
      getCookie, 
      setCookie, 
-     removeCookie 
+     removeCookie,
+     sumCheck,
  } from "summer-js-tools";
 
  sumColor.randomColor(); // 随机一个颜色值 return string
@@ -38,5 +39,10 @@
  setCookie('name', 'value', 7); // 设置name:value, 有效期7天
  getCookie('name'); // 获取
  removeCookie('name');
+
+ // 常见的计算后结果、有效值检测 null, undefined, '', NaN, 空格 
+ sumCheck.checkValidValue(null); false
+ sumCheck.checkValidValue(undefined); false
+ sumCheck.checkValidValue(NaN); false
 
 ```
