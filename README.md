@@ -48,9 +48,11 @@ sumForm.verifyNumberInput('989..89.76');    // 989.89
 ```
 import { sumQuery } from "summer-js-tools";
 
-sumQuery.queryUrlStr('https://www.baidu.com?id=123&name=lily&age=18', 'name'); // lily
+sumQuery.queryUrlStr('https://www.baidu.com?id=123&name=lily&age=18', 'name'); 
+// lily
 
-sumQuery.queryUrlArgs('https://www.baidu.com?id=123&name=lily&age=18', 'name'); // {id: '123', name: 'lily', age: 18}
+sumQuery.queryUrlArgs('https://www.baidu.com?id=123&name=lily&age=18'); 
+// {id: '123', name: 'lily', age: 18}
 
 ```
 
