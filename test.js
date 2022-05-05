@@ -20,4 +20,4 @@ function verifyNumberInput(value, decimal = 2) {
     return value;
 }
 
-console.log(verifyNumberInput("123.898977", 0));
+console.log(verifyNumberInput("a", 0));

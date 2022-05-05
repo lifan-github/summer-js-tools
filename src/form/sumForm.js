@@ -55,20 +55,22 @@ export const isUrl = (url) => {
  * @return 返回值
  */
 export const verifyNumberInput = (value, decimal = 2)  => {
-    // 1、清除非数字的字符(不包含小数点.)
+    // 1、只能输入数字(排除小数点);
     value = value.replace(/[^\d.]/g, "");
 
-    // 2、只保留第一个. 清除多余的.
+    // 2、验证第一个字符是数字而不是.
+    value = value.replace(/^\./g, "");
+
+    // 2、若以0开头且连续键入多个0时，只保留一个0
+    value = value.replace(/^0+$/g,"0");
+
+    // 3、只保留第一个小数点(.)
     value = value.replace(/\.{2,}/g, ".");
     value = value.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
 
-    // 3、只能输入两个小数(动态值)              // 保留位数
-    // value = value.replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3');
-    let reg = new RegExp("^(\\-)*(\\d+)\\.(\\d{"+decimal+"}).*$");
+    // 4、精度最大位数
+    let reg = new RegExp("^(\\-)*(\\d+)\\.(\\d{" + decimal + "}).*$");
     value = value.replace(reg, '$1$2.$3');
-
-    // 4、排除0开头
-    value = parseFloat(value).toString();
 
     return value;
 }
